@@ -1,5 +1,5 @@
 # DApp_Voting frontend repo
-This repository contains frontend example of [DApp_Voting contracts](http://google.ru/)
+This repository contains frontend example of [DApp_Voting contracts](https://github.com/HotBlock/dapp_voting_contracts)
 
 **Libraries used**:
 
@@ -13,7 +13,7 @@ This repository contains frontend example of [DApp_Voting contracts](http://goog
 * Suitable browser
 * Web3 provider to one of ethereum test networks
 	* [**rinkeby**](https://www.rinkeby.io/#geth) 
-	* local network with deployed [contracts]()
+	* local network with deployed [contracts](https://github.com/HotBlock/dapp_voting_contracts)
 
 **Structure**:
 
@@ -26,7 +26,7 @@ This repository contains frontend example of [DApp_Voting contracts](http://goog
 Just clone the repo
 
 ```bash
-git clone http://repourl.github.com/
+git clone https://github.com/HotBlock/dapp_voting_frontend
 ```
 
 Go inside of cloned folder and run `login.html` with any browser (Firefox, Opera, Chrome recomended)
@@ -73,7 +73,7 @@ dad coral country machine mushroom pigeon happy job left retreat gain then
 
 ### Local network notes
 
-After deploying [contracts]() use [script]() to generate `contracts.js` and replace 
+After deploying [contracts](https://github.com/HotBlock/dapp_voting_contracts) use [script](https://github.com/HotBlock/dapp_voting_contracts/tree/master/scripts) to generate `contracts.js` and replace 
 the original placed in `js` folder
 
 Create new account
@@ -82,7 +82,7 @@ Open browser dev console (usually `Ctrl+Shift+i` or `Ctrl+Shift+k`) and execute 
 
 ```javascript
 toModerator() //your current lightwallet address
-toModerator("0x7897897879") //provided address
+toModerator("0x7410b0d014C923474718BDF3AB2c0539e79e1206") //provided address
 ```
 
 this script will add address to Moderator group and send 10 ETH from **`eth.coinbase`** address
