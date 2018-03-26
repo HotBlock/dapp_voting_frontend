@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moderator</title>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./dist/lightwallet.min.js"></script>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./dist/dumblight.js"></script>
+    <link rel="stylesheet" href="./css/default.css">
+    <script src="./js/contracts.js"></script>
+
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="info">
+        <div>
+            <span id="address"></span>
+            <span style="color: rgba(255,255,255,.5)"> you have </span>
+            <span id="balance"></span>
+        </div>
+        <div style="text-align:right;">
+            Your role -
+            <span id="state"></span>
+            <span id="infoButtons">
+                <a id="infoRefresh" class="bg-primary">Refresh</a>
+                |
+                <a id="logout" class="bg-danger">Log out</a>
+            </span>
+        </div>
+
+    </div>
+    <div style="clear:both;"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Admin Panel</a>
+            </div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">All</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Quorumed</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Utils</a>
+                </li>
+            </ul>
+        </div>
+        <span id="PlatformStatus" class="navbar-text">
+            Platform:
+            <span id="platformStatus">UNKNOWN</span>
+        </span>
+    </nav>
+
+    <div id="timer" class="container">
+    </div>
+
+    <div id="All" class="container page-tab">
+        <div class="list-group" id="AllList">
+
+        </div>
+    </div>
+
+    <div id="Quorumed" class="container page-tab hidden">
+        <div class="list-group" id="QuorumedList">
+
+        </div>
+    </div>
+
+    <div id="Utils" class="container page-tab hidden">
+        <div class="input-group">
+
+            <dl>
+                <dt>
+                    <label>Open Platform</label>
+                </dt>
+                <dd>
+                    <button class="btn btn-primary" id="platformStart">Start</button>
+                </dd>
+                <br>
+
+                <dt>
+                    <label>Add / Remove user</label>
+                </dt>
+                <dd class="input-group-prepend inputGroup-sizing-sm">
+                    <input type="text" placeholder="Address" id="setStaffAddress" class="form-control">
+                    <select id="setStaffRole" class="custom-select">
+                        <option selected>Choose Role</option>
+                        <option value="0">Fired</option>
+                        <option value="2">Staff</option>
+                        <option value="1">Moderator</option>
+                    </select>
+                    <button class="btn btn-primary" id="setStaffButton">Submit</button>
+                </dd>
+                <br>
+
+                <dt>
+                    <label>Deposite ETH to Platform
+                        <span style="color: rgba(0,0,0,0.5);"> (minumum 1 ETH)</span>
+                    </label>
+                </dt>
+                <dd class="input-group-prepend">
+                    <input type="number" id="depositeInput" class="form-control" value="1" min="1">
+                    <button id="depositeButton" class="btn btn-primary">Submit</button>
+                </dd>
+                <br>
+
+                <dt>
+                    <label>
+                        Change time for Voting
+                        <span id="timeToVote" style="color: rgba(0,0,0,0.5);">(current 1 day)</span>
+                    </label>
+                </dt>
+                <dd class="input-group-prepend">
+                    <input type="number" id="setVoteModificator" class="form-control">
+                    <select id="setVMUnit" class="custom-select">
+                        <option selected>Select unit</option>
+                        <option value="60">minutes</option>
+                        <option value="3600">hours</option>
+                        <option value="86400">days</option>
+                    </select>
+                    <button class="btn btn-primary" id="setVMButton">Submit</button>
+                </dd>
+                <br>
+
+                <dt>
+                    <label>
+                        Change time for adding proposals
+                        <span id="timeToPropose" style="color: rgba(0,0,0,0.5);">(current 1 day)</span>
+                    </label>
+                </dt>
+                <dd class="input-group-prepend">
+                    <input type="number" id="setProposalModificator" class="form-control">
+                    <select id="setPMUnit" class="custom-select">
+                        <option selected>Select unit</option>
+                        <option value="60">minutes</option>
+                        <option value="3600">hours</option>
+                        <option value="86400">days</option>
+                    </select>
+                    <button class="btn btn-primary" id="setPMButton">Submit</button>
+                </dd>
+                <br>
+
+            </dl>
+        </div>
+    </div>
+
+    <script src="./js/default.js"></script>
+    <script src="./js/moderator.js"></script>
+</body>
+
+</html>

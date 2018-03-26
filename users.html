@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>User</title>
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./dist/lightwallet.min.js"></script>
+  <script src="./bower_components/web3/dist/web3.min.js"></script>
+  <script src="./dist/dumblight.js"></script>
+  <link rel="stylesheet" href="./css/default.css">
+  <script src="./js/contracts.js"></script>
+
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="info">
+    <div>
+      <span id="address"></span>
+      <span style="color: rgba(255,255,255,.5)"> you have </span>
+      <span id="balance"></span>
+    </div>
+    <div style="text-align:right;">
+      Your role -
+      <span id="state"></span>
+      <span id="infoButtons">
+        <a id="infoRefresh" class="bg-primary">Refresh</a>
+        |
+        <a id="logout" class="bg-danger">Log out</a>
+      </span>
+    </div>
+
+  </div>
+  <div style="clear:both;"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Staff Panel</a>
+      </div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">All</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a href="#" class="nav-link">Quorumed</a>
+        </li> -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">Utils</a>
+        </li>
+      </ul>
+    </div>
+    <span id="PlatformStatus" class="navbar-text">
+      Platform:<span id="platformStatus">UNKNOWN</span>
+    </span>
+  </nav>
+
+  <div id="timer" class="container">
+  </div>
+
+  <div id="All" class="container page-tab">
+
+    <div class="d-flex align-items-end flex-column">
+      <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#addProposal" id="plusPropose">
+        + Add proposal
+      </button>
+    </div>
+
+    <div class="list-group" id="AllList">
+
+    </div>
+  </div>
+
+  <!-- Utils TODO:
+        
+     -->
+  <div id="Utils" class="container page-tab hidden">
+    <div class="input-group">
+
+      <dl>
+
+      </dl>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="addProposal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Send proposal</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          
+            <div class="form-group">
+              <input type="text" id="proposalTittle" class="form-control" placeholder="Tittle">
+            </div>
+            <div class="form-group">
+              <textarea name="" id="proposalDescription" cols="30" rows="3" class="form-control" 
+              placeholder="Description"></textarea>
+            </div>
+            <div id="form-group">
+              <input type="number" id="proposalMoney" max="0.5" min="0" class="form-control"
+               placeholder="ETH amount (max 0.5 ETH)" step="0.05">
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="sendProposalButton">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./js/default.js"></script>
+  <script src="./js/users.js"></script>
+</body>
+
+</html>

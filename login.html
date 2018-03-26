@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./dist/lightwallet.min.js"></script>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./dist/dumblight.js"></script>
+    <script src="./js/contracts.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="login-box">
+        <div class="login-box-body">
+
+            <div id="init">
+                <p class="login-box-msg">Choose option</p>
+                <button id="ICreate" class="btn btn-primary btn-block">Create</button>
+                <br>
+                <button id="IRestore" class="btn btn-info btn-block">Restore</button>
+            </div>
+
+            <div id="createBlock" class="form-group">
+                <p class="login-box-msg">Writeout your mnemonic and click next</p>
+                <textarea class="form-control" id="CBArea" rows="3" readonly></textarea>
+                <br>
+                <button class="btn btn-primary btn-block" id="CBButton">Next</button>
+            </div>
+
+            <div id="createBlock2" class="form-group">
+                <p class="login-box-msg">Type your mnemonic and click next</p>
+                <textarea id="CB2Input" class="form-control" rows="3"></textarea>
+                <br>
+                <button id="CB2Button" class="btn btn-primary btn-block">Next</button>
+            </div>
+
+            <div id="restore">
+                    <p class="login-box-msg">Type your mnemonic and click restore</p>
+                <textarea type="text" id="RInput" class="form-control" rows="3"></textarea>
+                <br>
+                <button id="RButton" class="btn btn-primary btn-block">Restore</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
