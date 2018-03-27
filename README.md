@@ -73,6 +73,8 @@ dad coral country machine mushroom pigeon happy job left retreat gain then
 
 ### Local network notes
 
+Web3 provider setted as `localhost:8545`, you can change it in `login.js` and `default.js` located in `js` folder
+
 After deploying [contracts](https://github.com/HotBlock/dapp_voting_contracts) use [script](https://github.com/HotBlock/dapp_voting_contracts/tree/master/scripts) to generate `contracts.js` and replace 
 the original placed in `js` folder
 
