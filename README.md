@@ -66,7 +66,7 @@ When time for voting ended sing in again as **moderator** and do next steps:
 ### Rinkeby notes
 Addresses of contracts:
 * **`Platform`** - 0x4a76E71beB9A0F0E495C1d2C6d713268e80D9F86
-* **'Staff'** - 0x138Ac6d24f62Fe3885aaF4F1E77F3bD5A5f45F6F
+* **`Staff`** - 0x138Ac6d24f62Fe3885aaF4F1E77F3bD5A5f45F6F
 
 Rinkeby network already have moderator account with next mnemonic:
 ```
